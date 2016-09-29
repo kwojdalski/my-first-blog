@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
+from django.shortcuts import render
 
 from .models import Choice, Question
 
@@ -23,6 +24,12 @@ class DetailView(generic.DetailView):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
+
+
+
+def BootStrapView(request):
+    # model = Question
+    render(request,'polls/bootstrap3.html')
 
 
 def vote(request, question_id):

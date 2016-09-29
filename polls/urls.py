@@ -9,5 +9,8 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),
     url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
     # url(r'^charts/simple.png$', 'polls.views.charts.simple'),
-    url(r'^charts/simple.png$', views.simple, name='chart')
+    url(r'^charts/simple.png$', views.simple, name='chart'),
+    url(r'bootstrap3.html', views.BootStrapView, name='bootstrap3')
 ]
+
+
